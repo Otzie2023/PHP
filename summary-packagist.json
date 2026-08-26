@@ -1,0 +1,58 @@
+{
+  "environment": {
+    "python": "3.12.3",
+    "unicode": "15.0.0",
+    "note": "XID_Start/XID_Continue come from this Unicode version; the uax31_profile column does not depend on it"
+  },
+  "corpus": {
+    "packages": 250,
+    "php_files": 61891,
+    "megabytes": 265.5,
+    "lex_errors": 0,
+    "skipped_binary": 0,
+    "skipped_no_open_tag": 104
+  },
+  "file_hazards": {
+    "invalid_utf8_files": 1,
+    "utf8_bom_files": 0,
+    "bidi_control_files": 1,
+    "declare_encoding_files": 0
+  },
+  "identifiers": {
+    "records": 1,
+    "occurrences": 1,
+    "distinct_names": 1,
+    "packages_affected": 1,
+    "files_affected": 1
+  },
+  "would_be_rejected_by_strict_mode": {
+    "invalid_utf8": 1,
+    "not_uax31": 0,
+    "not_uax31_profile": 0,
+    "not_nfc": 0,
+    "any": 1
+  },
+  "invisible_characters": {
+    "identifiers_containing_one": 0,
+    "accepted_by_raw_xid_this_unicode_version": 0
+  },
+  "security_signals": {
+    "confusable_script_mix": 0,
+    "multi_script": 0,
+    "confusable_with_ascii": 0
+  },
+  "case_folding": {
+    "casefold_divergence": 0,
+    "divergence_in_case_insensitive_role": 0
+  },
+  "first_party_vs_vendored": {
+    "first_party_records": 1,
+    "vendored_records": 0
+  },
+  "by_role": {
+    "class_decl": 1
+  },
+  "top_scripts": {
+    "": 1
+  }
+}

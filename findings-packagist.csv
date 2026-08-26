@@ -1,0 +1,2 @@
+pkg,file,line,role,vendored,kind,occurrences,name,name_hex,codepoints,valid_utf8,uax31,uax31_profile,invisible,nfc,scripts,mixed_script,multi_script,confusable_ascii,casefold_divergence,case_insensitive_role,uax31_offenders
+symfony__cache,symfony__cache/Traits/ValueWrapper.php,19,class_decl,False,T_STRING,1,<invalid utf-8>,a9,0,False,False,False,,False,,False,False,,False,True,

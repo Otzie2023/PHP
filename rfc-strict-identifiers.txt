@@ -1,0 +1,260 @@
+====== PHP RFC: Strict identifiers ======
+
+  * Version: 0.1
+  * Date: 2026-08-25
+  * Author: Luca Rodenhäuser, otzelot2021@outlook.de
+  * Status: Draft
+  * First Published at: http://wiki.php.net/rfc/strict_identifiers
+  * Implementation: (pending)
+
+===== Introduction =====
+
+PHP's scanner has always defined identifiers on bytes rather than on code points. From ''Zend/zend_language_scanner.l'':
+
+<code>
+LABEL	[a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*
+</code>
+
+Every byte from ''0x80'' to ''0xFF'' is accepted in both the first and subsequent positions. Because all bytes of a UTF-8 multi-byte sequence fall in that range, UTF-8 identifiers work -- by accident. The manual says so plainly:
+
+> PHP doesn't support Unicode variable names, however, some character encodings (such as UTF-8) encode characters in such a way that all bytes of a multi-byte character fall within the allowed range, thus making it a valid variable name.
+
+There is no encoding validation, no normalization requirement, and no conformance to Unicode Standard Annex #31. The consequences are observable today (verified on PHP 8.3.6):
+
+<code php>
+class Straße {}          // U+00DF
+new straße();            // resolves
+new STRAßE();            // resolves
+new Straẞe();            // Error: class not found  (U+1E9E)
+new STRASSE();           // Error: class not found
+</code>
+
+''Strasse'' and ''STRASSE'' are one identifier; ''Straße'' and ''Straẞe'' are two. Case-insensitive symbol lookup goes through ''zend_tolower_ascii()'' (''Zend/zend_operators.h''), which maps only ''A''--''Z''.
+
+Further observed behaviour:
+
+  * ''$<U+1F642> = 1;'' is accepted. Emoji are valid identifiers.
+  * ''$x'' and ''$x<U+00A0>'' are two different variables that render identically.
+  * ''$a<U+0308>'' (NFD) and ''$<U+00E4>'' (NFC) are two different variables that render identically.
+  * ''${"\xFF\xFE"} = 1;'' is accepted. Invalid UTF-8 is a valid variable name.
+
+This RFC does not propose that PHP accept more characters in identifiers -- it already accepts everything. It proposes an opt-in mode in which the accepted set is **specified**.
+
+==== Evidence from real code ====
+
+Two corpora were scanned with a tokenizer-based survey tool (see [[#references|References]]). Extraction uses ''ext/tokenizer'', so comments and string literals are excluded; classification of the extracted identifiers is done outside PHP.
+
+^ ^ Packagist, top 250 by downloads ^ GitHub, 250 repositories ^
+| PHP files | 61,891 | 106,713 |
+| Non-ASCII identifier records | **1** | 136 |
+| Distinct names | 1 | 107 |
+| Packages affected | 1 | 14 |
+
+Against the rule proposed below:
+
+^ Check ^ Packagist ^ GitHub ^
+| Not well-formed UTF-8 | 1 | 17 |
+| Not conformant to the proposed profile | 0 | 16 |
+| Not in Normalization Form C | **0** | **0** |
+| Any of the above | 1 | 33 |
+
+Three findings are load-bearing for this proposal.
+
+**One. The entire measured cost on Packagist is a single identifier, and it is in Symfony.** ''symfony/cache'', ''Traits/ValueWrapper.php'' line 19 declares a class whose entire name is the single byte ''0xA9''. The file consequently does not decode as UTF-8. This was verified against upstream branch 7.3 and found independently in both corpora. It is simultaneously the whole measured backward-compatibility cost of a strict mode and the reason that mode must be opt-in rather than a default or an INI setting.
+
+**Two. The diagnostic value is real and already realised.** The Alipay OpenAPI SDK contains
+
+<code php>
+$chrtext<U+00A0> = null;
+// ...
+openssl_public_encrypt($block, $chrtext<U+00A0>, $res);
+</code>
+
+with U+00A0 NO-BREAK SPACE glued onto the identifier. It works only because the typo is consistent throughout the function; anyone typing ''$chrtext'' normally creates a silently different variable that is passed by reference and stays ''null''. Five vendored copies appear across four unrelated projects in the GitHub corpus. U+00A0 is not in ''XID_Continue'', so the check proposed here catches it at compile time.
+
+**Three. The constituency is not hypothetical.** 52 of the 136 GitHub records are PHPUnit method declarations in Japanese, for example ''test_<Japanese phrase>()''. 32 are SimpleXML property accesses against CommerceML (1C) exports, where the element names are dictated by the interchange format. These identifiers are already well-formed, NFC, and conformant. They gain a guarantee, not a restriction.
+
+===== Proposal =====
+
+A new compile-time declare directive:
+
+<code php>
+declare(strict_identifiers=1);
+</code>
+
+Within a file that declares it, every identifier token containing at least one byte greater than or equal to ''0x80'' must satisfy all of the following, or compilation fails with a ''ParseError'':
+
+  - The token is well-formed UTF-8.
+  - The token conforms to UAX31-R1-2 with the profile defined below.
+  - The token is in Normalization Form C.
+
+Identifiers consisting only of bytes below ''0x80'' are not examined. This is not merely an optimisation: it is what makes the change free for existing code.
+
+==== The profile ====
+
+PHP declares a profile of UAX31-R1-1 as permitted by **UAX31-R1-2**:
+
+  * **Start** := ''XID_Start'', plus U+005F LOW LINE (Table 3 of UAX #31), minus code points with ''Default_Ignorable_Code_Point=Yes''
+  * **Continue** := ''XID_Continue'', minus code points with ''Default_Ignorable_Code_Point=Yes''
+  * **Medial** := empty
+
+The subtraction is the **Default-Ignorable Exclusion Profile** standardised in UAX #31 section 7.3. It is not an invention of this RFC. UAX #31 section 2.3 states that the variation selectors and joining controls are in ''XID_Continue'', and then recommends against them for this exact use:
+
+> Because variation selectors and joining controls request a difference in display but do not guarantee it, they do not work well in general-purpose identifiers. A profile should be used to remove them from general-purpose identifiers (along with other Default_Ignorable_Code_Points), unless their use is required in a particular domain, such as in a profile that includes emoji.
+
+C++ reached the same conclusion in P1949: format characters are not allowed in C++ identifiers.
+
+This subtraction removes 269 code points from ''XID_Continue'', including U+200C ZERO WIDTH NON-JOINER, U+200D ZERO WIDTH JOINER and the variation selectors U+FE00..U+FE0F. U+005F is added to Start because ''XID_Start'' does not contain it while ''XID_Continue'' does. U+0024 DOLLAR SIGN is **not** added: in PHP the sigil is not part of the identifier, as the scanner rule for ''T_VARIABLE'' emits the token with offset 1.
+
+PHP does **not** adopt the Emoji Profile of UAX #31 section 7.2. Under this RFC, ''$<U+1F642>'' is rejected in a strict-identifiers file.
+
+==== Unicode version ====
+
+Property values are taken from a version of the Unicode Character Database bundled with php-src, **no older than Unicode 16.0**. The exact version is exposed as a new constant ''PHP_UNICODE_VERSION''.
+
+A minimum rather than a pin is the form the standard itself prescribes. The note to **UAX31-C1** says that an implementation using property-based definitions with an unversioned reference to the UCD "should specify a minimum version of Unicode for the properties".
+
+A minimum is safe because of the Unicode Character Encoding Stability Policies:
+
+> Once a character is XID_Continue, it must continue to be so in all future versions. (Unicode 4.1+)
+
+> Once a character is XID_Start, it must continue to be so in all future versions. (Unicode 3.0.1+)
+
+> All strings that are valid default Unicode identifiers will continue to be valid default Unicode identifiers in all subsequent versions of Unicode. (Unicode 3.0+)
+
+The sets therefore only grow. A newer bundled UCD accepts a superset, so source written against the floor keeps compiling.
+
+The choice of 16.0 as the floor is deliberate rather than arbitrary. UAX31-R1a **Restricted Format Characters** was withdrawn in Unicode 15.1, and the joining controls it used to govern became part of the default; this was verified empirically -- U+200C and U+200D have ''Other_ID_Continue=Yes'' and ''XID_Continue=Yes'' under the current UCD, and ''XID_Continue=No'' under Unicode 15.0. A floor at or above 16.0 means the profile text in this RFC and the UAX #31 text it references describe the same world. At the time of writing the current version is Unicode 17.0 (released 2025-09-09), so the floor has headroom by design.
+
+==== NFC is required, not applied ====
+
+Identifiers that are not in NFC are rejected. PHP does not silently rewrite them.
+
+This is **UAX31-R6 Filtered Normalized Identifiers** with Normalization Form C. It is chosen over UAX31-R4 (normalise and treat equivalents as equal) for three reasons:
+
+  * The survey found **zero** non-NFC identifiers across 168,604 files. Nothing needs rewriting.
+  * Requiring NFC needs only a quick-check table. Performing normalization needs full composition data plus a code path that changes identifier bytes between the lexer and the symbol table.
+  * Silent rewriting is a bad property in a language. Python normalises identifiers to NFKC under PEP 3131, with the consequence that ''\u00AA = 1'' binds the name ''a''. Verified on CPython 3.12. PHP should not acquire that behaviour.
+
+NFC and not NFKC: PHP has case-sensitive and case-insensitive symbol kinds in the same language, and UAX #31 section 5 suggests NFKC only for the case-insensitive situation. NFKC would also fold characters that users deliberately distinguish. NFC is the conservative choice and matches C++.
+
+==== Conformance statement ====
+
+As required by **UAX31-C1**, this specification is written against UAX #31 revision 43 (Unicode 17.0.0, dated 2025-08-20).
+
+As required by **UAX31-C2**, PHP would observe:
+
+  * **UAX31-R1 Default Identifiers**, via UAX31-R1-2 with the profile above.
+  * **UAX31-R6 Filtered Normalized Identifiers**, with Normalization Form C, no excluded characters.
+
+PHP would explicitly **not** claim:
+
+  * **UAX31-R1b Stable Identifiers.** The note to R1b states that an implementation meeting R1 without declaring a profile also meets R1b. This RFC declares a profile, and UAX #31 section 2.3 warns that "the Default_Ignorable_Code_Point property values are not guaranteed to be stable". If a future Unicode version adds a code point to ''Default_Ignorable_Code_Point'', an identifier accepted by one PHP release could be rejected by a later one. This is documented rather than worked around: the affected code points are by definition invisible, the set has grown rarely, and the alternative -- freezing the exclusion set at the floor version forever -- would let future invisible characters into identifiers permanently. Claiming R1b is listed under [[#future_scope|Future Scope]].
+  * **UAX31-R2**, **R3**, **R4**, **R5**, **R7**, **R8**.
+
+===== Implementation =====
+
+The re2c scanner is **not** modified. This is the central implementation claim of the RFC and it deserves to be stated explicitly.
+
+The existing ''LABEL'' rule is already maximally permissive over bytes, and because every continuation byte of a UTF-8 sequence is greater than or equal to ''0x80'', the rule can never split a UTF-8 sequence. A strict mode only ever **rejects**; it never needs to accept anything the current scanner does not already produce as a single token. The check can therefore run after the token has been formed, with no DFA regeneration, no change to ''ext/tokenizer'' output, and no risk to the scanner's hot path.
+
+Concretely:
+
+  * ''zend_declarables'' (''Zend/zend_compile.h'') gains a ''bool strict_identifiers''. It currently has a single member, ''ticks''.
+  * ''zend_handle_declares()'' (''Zend/zend_compile.c'') gains a branch alongside the existing ''strict_types'' branch, using the same ''zend_is_first_statement()'' guard and the same rejection of block mode.
+  * Validation is invoked where identifier tokens become ''zend_string''s. All seven identifier-producing scanner rules -- ''T_STRING'' (two rules), ''T_VARIABLE'', ''T_NAME_QUALIFIED'', ''T_NAME_FULLY_QUALIFIED'', ''T_NAME_RELATIVE'', and the heredoc label -- funnel through ''RETURN_TOKEN_WITH_STR'' into the ''emit_token_with_str'' label and ''zend_copy_value()''. Note that ''zend_lex_tstring()'' is **not** this path: it scans ASCII letters and underscore only and serves the keyword-as-identifier case.
+  * The first action of the validator is a scan for any byte greater than or equal to ''0x80''. Pure-ASCII identifiers -- effectively all identifiers in existing code -- return immediately.
+
+==== Bundled data ====
+
+Measured from the current UCD, as sorted ''uint32'' range pairs with the profile subtraction pre-applied:
+
+^ Table ^ Ranges ^ Size ^
+| Start (XID_Start minus Default_Ignorable) | 693 | 5.4 KiB |
+| Continue (XID_Continue minus Default_Ignorable) | 807 | 6.3 KiB |
+| NFC quick-check | 251 | 2.0 KiB |
+| **Total** | | **13.7 KiB** |
+
+A two-stage table would be smaller. No dependency on ext/intl, ICU, or ext/mbstring is introduced. For comparison, php-src already bundles Unicode data in ''ext/mbstring''.
+
+===== Backward Incompatible Changes =====
+
+None. The directive is opt-in and per-file, and files that do not declare it compile exactly as before.
+
+For files that do declare it, the measured impact is given above: one identifier in the 250 most-installed Packagist packages, 33 identifier records across 250 GitHub repositories. Any of these can be fixed by removing the declare from the file or by correcting the identifier.
+
+===== Proposed PHP Version(s) =====
+
+Next PHP 8.x. PHP 8.6 reached soft feature freeze at Beta 1 on 2026-08-13, so the realistic target is PHP 8.7.
+
+===== RFC Impact =====
+
+==== To SAPIs ====
+None.
+
+==== To Existing Extensions ====
+''ext/tokenizer'' is unaffected: the token stream is unchanged, because the scanner is unchanged. Only the compiler rejects.
+
+''ext/opcache'' is unaffected. Validation happens at compile time; cached opcodes carry already-validated identifiers.
+
+Static analysis tooling that reimplements PHP's identifier rule -- ''nikic/PHP-Parser'' uses the same byte class as php-src, and so does the regular expression in the manual -- continues to be correct for files without the declare, and would need to learn the new rule to report errors ahead of the engine.
+
+==== To Opcache ====
+None.
+
+==== New Constants ====
+''PHP_UNICODE_VERSION'' -- the version of the Unicode Character Database the running binary was built against, as a string, e.g. ''"16.0.0"''.
+
+==== php.ini Defaults ====
+None. Deliberately: an INI setting would make the meaning of a source file depend on server configuration, which is exactly the property that makes ''zend.multibyte'' hard to reason about.
+
+===== Unaffected PHP Functionality =====
+
+**Symbols created at runtime are out of scope.** ''define()'', ''$$name'', ''$obj->{$expr}'', ''class_exists()'' with a computed string, and property names materialised by ''json_decode()'' never pass through the scanner and are not validated. Verified: ''define("\xC3\x84", 1)'' works, and ''json_decode('{"<U+1F4A9>":42}')'' produces an object property with that name.
+
+This is a real gap and it is stated rather than hidden. Closing it would mean validating every dynamic symbol-table insertion, which is a runtime cost paid by all code, a behaviour change for ''json_decode()'' on arbitrary input, and a much larger proposal. The directive governs what the **compiler** accepts from source text.
+
+**Case-insensitivity is unchanged.** ''Straße'' and ''Straẞe'' remain distinct classes; ''Strasse'' and ''STRASSE'' remain the same class. See [[#future_scope|Future Scope]].
+
+**Confusables and mixed scripts are not rejected.** The survey found zero Latin/Cyrillic or Latin/Greek mixed identifiers in either corpus. UAX #31 section 2.3 says that for programming languages, spoofing "is more comprehensively addressed by higher-level diagnostics rather than at the syntactic level".
+
+**Bidirectional control characters in comments and string literals are unaffected.** They are a genuine hazard -- UAX #31 section 4.1.1 gives a worked example where ''x + <Hebrew identifier> == 1'' displays with a different apparent grouping than it parses -- but they are not an identifier problem, and one of the six occurrences found in the corpora is a legitimate use inside a string literal holding a Uyghur endonym in ''nesbot/carbon''. A separate lint is the right vehicle.
+
+===== Future Scope =====
+
+  * **Case folding.** PHP's split behaviour between ASCII and non-ASCII case-insensitivity is the strongest single argument that identifiers are currently under-specified, but changing it is a backward-compatibility break of a different magnitude and belongs in its own RFC. UAX #31 section 5.2.1 is explicit that implementations "should never use the General_Category or Lowercase or Uppercase properties to test for casing conditions ... Instead, they should instead use Case_Folding or NFKC_CaseFold". The three candidate designs -- keep ASCII folding, adopt simple case folding (U+1E9E folds to U+00DF, so ''Straße'' and ''Straẞe'' unify but ''Strasse'' does not), or adopt full case folding (U+00DF folds to ''ss'', unifying all four, at the cost of a length-changing fold in every symbol lookup) -- have materially different consequences and deserve a separate discussion.
+  * **Claiming UAX31-R1b** by maintaining an explicit list of code points that were not ''Default_Ignorable'' at the floor version.
+  * **A diagnostic mode** implementing the UTS #39 General Security Profile, or the recommendations of UTS #55 "Unicode Source Code Handling", as warnings rather than errors.
+  * **Making the directive the default in a future major version**, once the ecosystem has had time to react. Not proposed here.
+
+===== Open Issues =====
+
+  * **Directive name.** ''strict_identifiers'' is proposed because the change is a validation rule, not a capability, and because it parallels ''strict_types''. ''unicode_identifiers'' reads as if it enables something that already works. A secondary vote is offered.
+  * Whether the error should be ''ParseError'' or a compile error, and the exact message wording.
+
+===== Proposed Voting Choices =====
+
+Primary vote, requires a 2/3 majority: accept the RFC as proposed. Yes/No.
+
+Secondary vote, simple majority, conditional on the primary passing: directive name, ''strict_identifiers'' vs ''unicode_identifiers''.
+
+===== Patches and Tests =====
+
+Pending.
+
+===== References =====
+
+  * Unicode Standard Annex #31, Unicode Identifiers and Syntax, revision 43: https://www.unicode.org/reports/tr31/
+  * Unicode Character Encoding Stability Policies: https://www.unicode.org/policies/stability_policy.html
+  * Unicode Technical Standard #39, Unicode Security Mechanisms
+  * Unicode Technical Standard #55, Unicode Source Code Handling
+  * P1949, C++ Identifier Syntax using Unicode Standard Annex 31: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/p1949r4.html
+  * Survey tooling and raw data (scanner, classifier, self-test, corpus manifests, per-identifier CSVs): https://github.com/Otzie2023/PHP
+
+===== Rejected Features =====
+
+  * **An INI setting.** Makes the meaning of a source file depend on deployment.
+  * **Enabling the rule by default.** ''symfony/cache'' alone demonstrates why.
+  * **Normalising identifiers instead of requiring NFC.** See above; Python's NFKC folding is the cautionary example.
+  * **Adopting the UAX #31 Emoji Profile.** Emoji identifiers currently work by accident; this RFC does not make them work on purpose.
+  * **Modifying the re2c scanner.** Unnecessary, and the DFA is a poor place to take risk.

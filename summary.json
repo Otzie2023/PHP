@@ -1,0 +1,72 @@
+{
+  "environment": {
+    "python": "3.12.3",
+    "unicode": "15.0.0",
+    "note": "XID_Start/XID_Continue come from this Unicode version; the uax31_profile column does not depend on it"
+  },
+  "corpus": {
+    "packages": 250,
+    "php_files": 106713,
+    "megabytes": 540.3,
+    "lex_errors": 0,
+    "skipped_binary": 5,
+    "skipped_no_open_tag": 4280
+  },
+  "file_hazards": {
+    "invalid_utf8_files": 125,
+    "utf8_bom_files": 20,
+    "bidi_control_files": 6,
+    "declare_encoding_files": 4
+  },
+  "identifiers": {
+    "records": 136,
+    "occurrences": 214,
+    "distinct_names": 107,
+    "packages_affected": 14,
+    "files_affected": 41
+  },
+  "would_be_rejected_by_strict_mode": {
+    "invalid_utf8": 17,
+    "not_uax31": 16,
+    "not_uax31_profile": 16,
+    "not_nfc": 0,
+    "any": 33
+  },
+  "invisible_characters": {
+    "identifiers_containing_one": 11,
+    "accepted_by_raw_xid_this_unicode_version": 0
+  },
+  "security_signals": {
+    "confusable_script_mix": 0,
+    "multi_script": 54,
+    "confusable_with_ascii": 0
+  },
+  "case_folding": {
+    "casefold_divergence": 34,
+    "divergence_in_case_insensitive_role": 0
+  },
+  "first_party_vs_vendored": {
+    "first_party_records": 119,
+    "vendored_records": 17
+  },
+  "by_role": {
+    "function_decl": 54,
+    "other": 45,
+    "property_or_method": 32,
+    "static_member": 2,
+    "class_decl": 2,
+    "heredoc_label": 1
+  },
+  "top_scripts": {
+    "Cyrillic": 34,
+    "Cjk,Common,Hiragana,Katakana,Latin,Other": 30,
+    "": 17,
+    "Common,Latin": 14,
+    "Latin": 11,
+    "Cjk,Katakana,Latin": 9,
+    "Cjk,Hiragana,Katakana,Latin": 6,
+    "Cjk,Hiragana,Katakana,Latin,Other": 4,
+    "Other": 3,
+    "Cjk,Latin,Other": 2
+  }
+}
