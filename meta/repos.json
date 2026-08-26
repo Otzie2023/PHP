@@ -1,0 +1,1802 @@
+[
+ {
+  "full_name": "danielmiessler/SecLists",
+  "stars": 73050,
+  "default_branch": "master",
+  "size_kb": 3534607
+ },
+ {
+  "full_name": "coollabsio/coolify",
+  "stars": 61007,
+  "default_branch": "main",
+  "size_kb": 81827
+ },
+ {
+  "full_name": "nextcloud/server",
+  "stars": 36567,
+  "default_branch": "master",
+  "size_kb": 6971447
+ },
+ {
+  "full_name": "laravel/framework",
+  "stars": 34878,
+  "default_branch": "13.x",
+  "size_kb": 104368
+ },
+ {
+  "full_name": "filamentphp/filament",
+  "stars": 31881,
+  "default_branch": "4.x",
+  "size_kb": 590812
+ },
+ {
+  "full_name": "symfony/symfony",
+  "stars": 31135,
+  "default_branch": "8.2",
+  "size_kb": 338817
+ },
+ {
+  "full_name": "blueimp/jQuery-File-Upload",
+  "stars": 30718,
+  "default_branch": "master",
+  "size_kb": 4611
+ },
+ {
+  "full_name": "composer/composer",
+  "stars": 29503,
+  "default_branch": "main",
+  "size_kb": 30122
+ },
+ {
+  "full_name": "bagisto/bagisto",
+  "stars": 27988,
+  "default_branch": "2.4",
+  "size_kb": 406129
+ },
+ {
+  "full_name": "fzaninotto/Faker",
+  "stars": 26650,
+  "default_branch": "master",
+  "size_kb": 10094
+ },
+ {
+  "full_name": "monicahq/monica",
+  "stars": 25101,
+  "default_branch": "main",
+  "size_kb": 152694
+ },
+ {
+  "full_name": "firefly-iii/firefly-iii",
+  "stars": 24414,
+  "default_branch": "main",
+  "size_kb": 319001
+ },
+ {
+  "full_name": "krayin/laravel-crm",
+  "stars": 23710,
+  "default_branch": "2.2",
+  "size_kb": 54482
+ },
+ {
+  "full_name": "livewire/livewire",
+  "stars": 23569,
+  "default_branch": "4.x",
+  "size_kb": 48173
+ },
+ {
+  "full_name": "guzzle/guzzle",
+  "stars": 23458,
+  "default_branch": "8.1",
+  "size_kb": 13504
+ },
+ {
+  "full_name": "PHPMailer/PHPMailer",
+  "stars": 22281,
+  "default_branch": "master",
+  "size_kb": 31459
+ },
+ {
+  "full_name": "DesignPatternsPHP/DesignPatternsPHP",
+  "stars": 22187,
+  "default_branch": "main",
+  "size_kb": 6214
+ },
+ {
+  "full_name": "matomo-org/matomo",
+  "stars": 21802,
+  "default_branch": "6.x-dev",
+  "size_kb": 369043
+ },
+ {
+  "full_name": "Seldaek/monolog",
+  "stars": 21399,
+  "default_branch": "main",
+  "size_kb": 5034
+ },
+ {
+  "full_name": "WordPress/WordPress",
+  "stars": 21363,
+  "default_branch": "master",
+  "size_kb": 693435
+ },
+ {
+  "full_name": "sebastianbergmann/phpunit",
+  "stars": 20045,
+  "default_branch": "main",
+  "size_kb": 262901
+ },
+ {
+  "full_name": "fruitcake/laravel-debugbar",
+  "stars": 19281,
+  "default_branch": "master",
+  "size_kb": 15640
+ },
+ {
+  "full_name": "BookStackApp/BookStack",
+  "stars": 19000,
+  "default_branch": "development",
+  "size_kb": 51784
+ },
+ {
+  "full_name": "easychen/howto-make-more-money",
+  "stars": 18642,
+  "default_branch": "master",
+  "size_kb": 7943
+ },
+ {
+  "full_name": "bcit-ci/CodeIgniter",
+  "stars": 18165,
+  "default_branch": "develop",
+  "size_kb": 54780
+ },
+ {
+  "full_name": "nikic/PHP-Parser",
+  "stars": 17456,
+  "default_branch": "master",
+  "size_kb": 7537
+ },
+ {
+  "full_name": "koel/koel",
+  "stars": 17230,
+  "default_branch": "master",
+  "size_kb": 28202
+ },
+ {
+  "full_name": "easychen/opc-methodology",
+  "stars": 16666,
+  "default_branch": "master",
+  "size_kb": 33706
+ },
+ {
+  "full_name": "briannesbitt/Carbon",
+  "stars": 16598,
+  "default_branch": "master",
+  "size_kb": 21718
+ },
+ {
+  "full_name": "flarum/flarum",
+  "stars": 16382,
+  "default_branch": "2.x",
+  "size_kb": 754
+ },
+ {
+  "full_name": "FreshRSS/FreshRSS",
+  "stars": 15829,
+  "default_branch": "edge",
+  "size_kb": 35652
+ },
+ {
+  "full_name": "getgrav/grav",
+  "stars": 15650,
+  "default_branch": "develop",
+  "size_kb": 32363
+ },
+ {
+  "full_name": "cachethq/cachet",
+  "stars": 15228,
+  "default_branch": "3.x",
+  "size_kb": 37975
+ },
+ {
+  "full_name": "erusev/parsedown",
+  "stars": 15058,
+  "default_branch": "master",
+  "size_kb": 1512
+ },
+ {
+  "full_name": "barryvdh/laravel-ide-helper",
+  "stars": 14955,
+  "default_branch": "master",
+  "size_kb": 1903
+ },
+ {
+  "full_name": "grokability/snipe-it",
+  "stars": 14871,
+  "default_branch": "master",
+  "size_kb": 322660
+ },
+ {
+  "full_name": "Intervention/image",
+  "stars": 14366,
+  "default_branch": "develop",
+  "size_kb": 6848
+ },
+ {
+  "full_name": "yiisoft/yii2",
+  "stars": 14299,
+  "default_branch": "master",
+  "size_kb": 91553
+ },
+ {
+  "full_name": "Qloapps/QloApps",
+  "stars": 14235,
+  "default_branch": "develop",
+  "size_kb": 126126
+ },
+ {
+  "full_name": "phpstan/phpstan",
+  "stars": 14081,
+  "default_branch": "2.2.x",
+  "size_kb": 7248043
+ },
+ {
+  "full_name": "PHPOffice/PhpSpreadsheet",
+  "stars": 13978,
+  "default_branch": "master",
+  "size_kb": 82601
+ },
+ {
+  "full_name": "thephpleague/flysystem",
+  "stars": 13586,
+  "default_branch": "3.x",
+  "size_kb": 4009
+ },
+ {
+  "full_name": "vlucas/phpdotenv",
+  "stars": 13550,
+  "default_branch": "master",
+  "size_kb": 696
+ },
+ {
+  "full_name": "PHP-CS-Fixer/PHP-CS-Fixer",
+  "stars": 13545,
+  "default_branch": "master",
+  "size_kb": 41785
+ },
+ {
+  "full_name": "digininja/DVWA",
+  "stars": 13538,
+  "default_branch": "master",
+  "size_kb": 2861
+ },
+ {
+  "full_name": "roots/sage",
+  "stars": 13261,
+  "default_branch": "main",
+  "size_kb": 10297
+ },
+ {
+  "full_name": "filp/whoops",
+  "stars": 13235,
+  "default_branch": "master",
+  "size_kb": 1773
+ },
+ {
+  "full_name": "spatie/laravel-permission",
+  "stars": 12963,
+  "default_branch": "main",
+  "size_kb": 3276
+ },
+ {
+  "full_name": "wallabag/wallabag",
+  "stars": 12932,
+  "default_branch": "master",
+  "size_kb": 139619
+ },
+ {
+  "full_name": "star7th/showdoc",
+  "stars": 12847,
+  "default_branch": "master",
+  "size_kb": 42563
+ },
+ {
+  "full_name": "SpartnerNL/Laravel-Excel",
+  "stars": 12704,
+  "default_branch": "4.x",
+  "size_kb": 3986
+ },
+ {
+  "full_name": "ramsey/uuid",
+  "stars": 12635,
+  "default_branch": "4.x",
+  "size_kb": 3273
+ },
+ {
+  "full_name": "piotrplenik/clean-code-php",
+  "stars": 12448,
+  "default_branch": "master",
+  "size_kb": 368
+ },
+ {
+  "full_name": "typecho/typecho",
+  "stars": 12432,
+  "default_branch": "master",
+  "size_kb": 10751
+ },
+ {
+  "full_name": "phacility/phabricator",
+  "stars": 12297,
+  "default_branch": "master",
+  "size_kb": 144626
+ },
+ {
+  "full_name": "slimphp/Slim",
+  "stars": 12280,
+  "default_branch": "4.x",
+  "size_kb": 7256
+ },
+ {
+  "full_name": "YOURLS/YOURLS",
+  "stars": 12170,
+  "default_branch": "master",
+  "size_kb": 480077
+ },
+ {
+  "full_name": "magento/magento2",
+  "stars": 12168,
+  "default_branch": "2.4-develop",
+  "size_kb": 750096
+ },
+ {
+  "full_name": "assimon/dujiaoka",
+  "stars": 12144,
+  "default_branch": "master",
+  "size_kb": 19302
+ },
+ {
+  "full_name": "docker-archive-public/docker.labs",
+  "stars": 11896,
+  "default_branch": "master",
+  "size_kb": 221641
+ },
+ {
+  "full_name": "thedevdojo/voyager",
+  "stars": 11807,
+  "default_branch": "1.7",
+  "size_kb": 48374
+ },
+ {
+  "full_name": "aureuserp/aureuserp",
+  "stars": 11777,
+  "default_branch": "master",
+  "size_kb": 29364
+ },
+ {
+  "full_name": "pestphp/pest",
+  "stars": 11680,
+  "default_branch": "5.x",
+  "size_kb": 3862
+ },
+ {
+  "full_name": "egulias/EmailValidator",
+  "stars": 11641,
+  "default_branch": "4.x",
+  "size_kb": 727
+ },
+ {
+  "full_name": "walkor/workerman",
+  "stars": 11544,
+  "default_branch": "master",
+  "size_kb": 4032
+ },
+ {
+  "full_name": "tymondesigns/jwt-auth",
+  "stars": 11495,
+  "default_branch": "2.x",
+  "size_kb": 1757
+ },
+ {
+  "full_name": "Leantime/leantime",
+  "stars": 11437,
+  "default_branch": "master",
+  "size_kb": 250019
+ },
+ {
+  "full_name": "PHPOffice/PHPExcel",
+  "stars": 11364,
+  "default_branch": "1.8",
+  "size_kb": 22024
+ },
+ {
+  "full_name": "doctrine/inflector",
+  "stars": 11340,
+  "default_branch": "2.1.x",
+  "size_kb": 2073
+ },
+ {
+  "full_name": "dompdf/dompdf",
+  "stars": 11177,
+  "default_branch": "master",
+  "size_kb": 17590
+ },
+ {
+  "full_name": "octobercms/october",
+  "stars": 11147,
+  "default_branch": "4.x",
+  "size_kb": 78955
+ },
+ {
+  "full_name": "doctrine/lexer",
+  "stars": 11146,
+  "default_branch": "3.0.x",
+  "size_kb": 319
+ },
+ {
+  "full_name": "z-song/laravel-admin",
+  "stars": 11142,
+  "default_branch": "master",
+  "size_kb": 15818
+ },
+ {
+  "full_name": "deployphp/deployer",
+  "stars": 11098,
+  "default_branch": "master",
+  "size_kb": 14246
+ },
+ {
+  "full_name": "doctrine/instantiator",
+  "stars": 10988,
+  "default_branch": "2.1.x",
+  "size_kb": 473
+ },
+ {
+  "full_name": "unopim/unopim",
+  "stars": 10854,
+  "default_branch": "3.0",
+  "size_kb": 52589
+ },
+ {
+  "full_name": "phalcon/cphalcon",
+  "stars": 10829,
+  "default_branch": "master",
+  "size_kb": 273585
+ },
+ {
+  "full_name": "squizlabs/PHP_CodeSniffer",
+  "stars": 10777,
+  "default_branch": "master",
+  "size_kb": 201893
+ },
+ {
+  "full_name": "tennc/webshell",
+  "stars": 10771,
+  "default_branch": "master",
+  "size_kb": 101993
+ },
+ {
+  "full_name": "mockery/mockery",
+  "stars": 10724,
+  "default_branch": "1.6.x",
+  "size_kb": 124264
+ },
+ {
+  "full_name": "serbanghita/Mobile-Detect",
+  "stars": 10679,
+  "default_branch": "4.x",
+  "size_kb": 4366
+ },
+ {
+  "full_name": "woocommerce/woocommerce",
+  "stars": 10475,
+  "default_branch": "trunk",
+  "size_kb": 936026
+ },
+ {
+  "full_name": "php-fig/log",
+  "stars": 10421,
+  "default_branch": "master",
+  "size_kb": 66
+ },
+ {
+  "full_name": "Anankke/SSPanel-UIM",
+  "stars": 10414,
+  "default_branch": "master",
+  "size_kb": 143654
+ },
+ {
+  "full_name": "rectorphp/rector",
+  "stars": 10408,
+  "default_branch": "main",
+  "size_kb": 379689
+ },
+ {
+  "full_name": "mautic/mautic",
+  "stars": 10385,
+  "default_branch": "7.x",
+  "size_kb": 306825
+ },
+ {
+  "full_name": "w7corp/easywechat",
+  "stars": 10368,
+  "default_branch": "6.x",
+  "size_kb": 7277
+ },
+ {
+  "full_name": "nextcloud/all-in-one",
+  "stars": 10333,
+  "default_branch": "main",
+  "size_kb": 14198
+ },
+ {
+  "full_name": "doctrine/orm",
+  "stars": 10170,
+  "default_branch": "3.6.x",
+  "size_kb": 56003
+ },
+ {
+  "full_name": "akaunting/akaunting",
+  "stars": 10090,
+  "default_branch": "master",
+  "size_kb": 86524
+ },
+ {
+  "full_name": "helloqingfeng/Awsome-Front-End-learning-resource",
+  "stars": 10044,
+  "default_branch": "master",
+  "size_kb": 75552
+ },
+ {
+  "full_name": "guyueyingmu/avbook",
+  "stars": 10037,
+  "default_branch": "master",
+  "size_kb": 8229
+ },
+ {
+  "full_name": "invoiceninja/invoiceninja",
+  "stars": 10022,
+  "default_branch": "v5-stable",
+  "size_kb": 4234943
+ },
+ {
+  "full_name": "php-fig/container",
+  "stars": 9995,
+  "default_branch": "master",
+  "size_kb": 338
+ },
+ {
+  "full_name": "bobthecow/psysh",
+  "stars": 9831,
+  "default_branch": "main",
+  "size_kb": 5896
+ },
+ {
+  "full_name": "kanboard/kanboard",
+  "stars": 9821,
+  "default_branch": "main",
+  "size_kb": 76792
+ },
+ {
+  "full_name": "symfony/console",
+  "stars": 9809,
+  "default_branch": "8.2",
+  "size_kb": 7415
+ },
+ {
+  "full_name": "googleapis/google-api-php-client",
+  "stars": 9806,
+  "default_branch": "main",
+  "size_kb": 16333
+ },
+ {
+  "full_name": "doctrine/dbal",
+  "stars": 9703,
+  "default_branch": "4.4.x",
+  "size_kb": 45905
+ },
+ {
+  "full_name": "swiftmailer/swiftmailer",
+  "stars": 9432,
+  "default_branch": "master",
+  "size_kb": 9247
+ },
+ {
+  "full_name": "dingo/api",
+  "stars": 9368,
+  "default_branch": "master",
+  "size_kb": 1684
+ },
+ {
+  "full_name": "phpDocumentor/ReflectionDocBlock",
+  "stars": 9361,
+  "default_branch": "6.x",
+  "size_kb": 1371
+ },
+ {
+  "full_name": "linuxserver/Heimdall",
+  "stars": 9302,
+  "default_branch": "2.x",
+  "size_kb": 46395
+ },
+ {
+  "full_name": "DenverCoder1/readme-typing-svg",
+  "stars": 9258,
+  "default_branch": "main",
+  "size_kb": 727
+ },
+ {
+  "full_name": "PrestaShop/PrestaShop",
+  "stars": 9200,
+  "default_branch": "develop",
+  "size_kb": 795410
+ },
+ {
+  "full_name": "FriendsOfPHP/Goutte",
+  "stars": 9193,
+  "default_branch": "master",
+  "size_kb": 2977
+ },
+ {
+  "full_name": "RSS-Bridge/rss-bridge",
+  "stars": 9187,
+  "default_branch": "master",
+  "size_kb": 18422
+ },
+ {
+  "full_name": "api-platform/api-platform",
+  "stars": 9180,
+  "default_branch": "main",
+  "size_kb": 6259
+ },
+ {
+  "full_name": "pterodactyl/panel",
+  "stars": 9174,
+  "default_branch": "1.0-develop",
+  "size_kb": 29789
+ },
+ {
+  "full_name": "phpDocumentor/TypeResolver",
+  "stars": 9158,
+  "default_branch": "2.x",
+  "size_kb": 963
+ },
+ {
+  "full_name": "reactphp/reactphp",
+  "stars": 9091,
+  "default_branch": "1.x",
+  "size_kb": 1374
+ },
+ {
+  "full_name": "phpDocumentor/ReflectionCommon",
+  "stars": 9036,
+  "default_branch": "2.x",
+  "size_kb": 169
+ },
+ {
+  "full_name": "fuzzdb-project/fuzzdb",
+  "stars": 8976,
+  "default_branch": "master",
+  "size_kb": 7323
+ },
+ {
+  "full_name": "sebastianbergmann/php-code-coverage",
+  "stars": 8925,
+  "default_branch": "main",
+  "size_kb": 138158
+ },
+ {
+  "full_name": "myclabs/DeepCopy",
+  "stars": 8885,
+  "default_branch": "1.x",
+  "size_kb": 303
+ },
+ {
+  "full_name": "solidtime-io/solidtime",
+  "stars": 8879,
+  "default_branch": "main",
+  "size_kb": 9183
+ },
+ {
+  "full_name": "owncloud/core",
+  "stars": 8829,
+  "default_branch": "master",
+  "size_kb": 357030
+ },
+ {
+  "full_name": "cakephp/cakephp",
+  "stars": 8796,
+  "default_branch": "5.x",
+  "size_kb": 118490
+ },
+ {
+  "full_name": "aimeos/aimeos-laravel",
+  "stars": 8693,
+  "default_branch": "master",
+  "size_kb": 5712
+ },
+ {
+  "full_name": "symfony/http-foundation",
+  "stars": 8625,
+  "default_branch": "8.2",
+  "size_kb": 10530
+ },
+ {
+  "full_name": "PrivateBin/PrivateBin",
+  "stars": 8569,
+  "default_branch": "master",
+  "size_kb": 16891
+ },
+ {
+  "full_name": "symfony/event-dispatcher",
+  "stars": 8532,
+  "default_branch": "8.2",
+  "size_kb": 1167
+ },
+ {
+  "full_name": "Sylius/Sylius",
+  "stars": 8514,
+  "default_branch": "2.3",
+  "size_kb": 363802
+ },
+ {
+  "full_name": "phpspec/prophecy",
+  "stars": 8471,
+  "default_branch": "master",
+  "size_kb": 1030
+ },
+ {
+  "full_name": "symfony/finder",
+  "stars": 8434,
+  "default_branch": "8.2",
+  "size_kb": 1387
+ },
+ {
+  "full_name": "ellite/Wallos",
+  "stars": 8397,
+  "default_branch": "main",
+  "size_kb": 8263
+ },
+ {
+  "full_name": "twigphp/Twig",
+  "stars": 8374,
+  "default_branch": "3.x",
+  "size_kb": 13637
+ },
+ {
+  "full_name": "crater-invoice-inc/crater",
+  "stars": 8342,
+  "default_branch": "master",
+  "size_kb": 45705
+ },
+ {
+  "full_name": "opencart/opencart",
+  "stars": 8185,
+  "default_branch": "master",
+  "size_kb": 229214
+ },
+ {
+  "full_name": "paragonie/random_compat",
+  "stars": 8154,
+  "default_branch": "master",
+  "size_kb": 969
+ },
+ {
+  "full_name": "symfony/http-kernel",
+  "stars": 8106,
+  "default_branch": "8.2",
+  "size_kb": 8695
+ },
+ {
+  "full_name": "symfony/thanks",
+  "stars": 8077,
+  "default_branch": "main",
+  "size_kb": 75
+ },
+ {
+  "full_name": "php-fig/simple-cache",
+  "stars": 8075,
+  "default_branch": "master",
+  "size_kb": 27
+ },
+ {
+  "full_name": "phpmyadmin/phpmyadmin",
+  "stars": 7914,
+  "default_branch": "master",
+  "size_kb": 2519764
+ },
+ {
+  "full_name": "top-think/think",
+  "stars": 7891,
+  "default_branch": "8.x",
+  "size_kb": 24376
+ },
+ {
+  "full_name": "doctrine/cache",
+  "stars": 7855,
+  "default_branch": "2.2.x",
+  "size_kb": 923
+ },
+ {
+  "full_name": "DevinVinson/WordPress-Plugin-Boilerplate",
+  "stars": 7840,
+  "default_branch": "master",
+  "size_kb": 824
+ },
+ {
+  "full_name": "vrana/adminer",
+  "stars": 7829,
+  "default_branch": "main",
+  "size_kb": 12497
+ },
+ {
+  "full_name": "symfony/polyfill-mbstring",
+  "stars": 7817,
+  "default_branch": "1.x",
+  "size_kb": 150
+ },
+ {
+  "full_name": "predis/predis",
+  "stars": 7780,
+  "default_branch": "main",
+  "size_kb": 9630
+ },
+ {
+  "full_name": "Laravel-Lang/lang",
+  "stars": 7777,
+  "default_branch": "main",
+  "size_kb": 74681
+ },
+ {
+  "full_name": "sebastianbergmann/php-timer",
+  "stars": 7737,
+  "default_branch": "main",
+  "size_kb": 87061
+ },
+ {
+  "full_name": "guzzle/promises",
+  "stars": 7717,
+  "default_branch": "3.0",
+  "size_kb": 481
+ },
+ {
+  "full_name": "webmozarts/assert",
+  "stars": 7652,
+  "default_branch": "master",
+  "size_kb": 729
+ },
+ {
+  "full_name": "sebastianbergmann/diff",
+  "stars": 7651,
+  "default_branch": "main",
+  "size_kb": 74943
+ },
+ {
+  "full_name": "symfony/routing",
+  "stars": 7613,
+  "default_branch": "8.2",
+  "size_kb": 4613
+ },
+ {
+  "full_name": "PHPOffice/PHPWord",
+  "stars": 7585,
+  "default_branch": "master",
+  "size_kb": 95049
+ },
+ {
+  "full_name": "laravel/lumen",
+  "stars": 7570,
+  "default_branch": "10.x",
+  "size_kb": 203
+ },
+ {
+  "full_name": "Dolibarr/dolibarr",
+  "stars": 7536,
+  "default_branch": "develop",
+  "size_kb": 1724071
+ },
+ {
+  "full_name": "lcobucci/jwt",
+  "stars": 7483,
+  "default_branch": "6.0.x",
+  "size_kb": 3684
+ },
+ {
+  "full_name": "sebastianbergmann/php-file-iterator",
+  "stars": 7477,
+  "default_branch": "main",
+  "size_kb": 70852
+ },
+ {
+  "full_name": "phar-io/manifest",
+  "stars": 7476,
+  "default_branch": "master",
+  "size_kb": 248
+ },
+ {
+  "full_name": "phar-io/version",
+  "stars": 7463,
+  "default_branch": "master",
+  "size_kb": 96
+ },
+ {
+  "full_name": "symfony/process",
+  "stars": 7453,
+  "default_branch": "8.2",
+  "size_kb": 2273
+ },
+ {
+  "full_name": "laravel/tinker",
+  "stars": 7439,
+  "default_branch": "3.x",
+  "size_kb": 271
+ },
+ {
+  "full_name": "symfony/var-dumper",
+  "stars": 7428,
+  "default_branch": "8.2",
+  "size_kb": 2741
+ },
+ {
+  "full_name": "sebastianbergmann/php-text-template",
+  "stars": 7426,
+  "default_branch": "main",
+  "size_kb": 67026
+ },
+ {
+  "full_name": "symfony/css-selector",
+  "stars": 7421,
+  "default_branch": "8.2",
+  "size_kb": 897
+ },
+ {
+  "full_name": "moodle/moodle",
+  "stars": 7351,
+  "default_branch": "main",
+  "size_kb": 966072
+ },
+ {
+  "full_name": "fideloper/TrustedProxy",
+  "stars": 7307,
+  "default_branch": "master",
+  "size_kb": 161
+ },
+ {
+  "full_name": "barryvdh/laravel-dompdf",
+  "stars": 7285,
+  "default_branch": "master",
+  "size_kb": 176
+ },
+ {
+  "full_name": "aonez/Keka",
+  "stars": 7258,
+  "default_branch": "master",
+  "size_kb": 53904
+ },
+ {
+  "full_name": "symfony/debug",
+  "stars": 7171,
+  "default_branch": "4.4",
+  "size_kb": 1482
+ },
+ {
+  "full_name": "roundcube/roundcubemail",
+  "stars": 7129,
+  "default_branch": "master",
+  "size_kb": 68658
+ },
+ {
+  "full_name": "DenverCoder1/github-readme-streak-stats",
+  "stars": 7102,
+  "default_branch": "main",
+  "size_kb": 1379
+ },
+ {
+  "full_name": "the-benchmarker/web-frameworks",
+  "stars": 7086,
+  "default_branch": "develop",
+  "size_kb": 167787
+ },
+ {
+  "full_name": "pixelfed/pixelfed",
+  "stars": 7074,
+  "default_branch": "dev",
+  "size_kb": 70033
+ },
+ {
+  "full_name": "mongodb/laravel-mongodb",
+  "stars": 7073,
+  "default_branch": "5.x",
+  "size_kb": 3813
+ },
+ {
+  "full_name": "elementor/elementor",
+  "stars": 7061,
+  "default_branch": "main",
+  "size_kb": 368983
+ },
+ {
+  "full_name": "sebastianbergmann/comparator",
+  "stars": 7046,
+  "default_branch": "main",
+  "size_kb": 87531
+ },
+ {
+  "full_name": "paragonie/awesome-appsec",
+  "stars": 7040,
+  "default_branch": "master",
+  "size_kb": 198
+ },
+ {
+  "full_name": "php-fig/http-message",
+  "stars": 7033,
+  "default_branch": "master",
+  "size_kb": 110
+ },
+ {
+  "full_name": "hamcrest/hamcrest-php",
+  "stars": 6994,
+  "default_branch": "master",
+  "size_kb": 436
+ },
+ {
+  "full_name": "openmediavault/openmediavault",
+  "stars": 6914,
+  "default_branch": "master",
+  "size_kb": 566345
+ },
+ {
+  "full_name": "hyperf/hyperf",
+  "stars": 6890,
+  "default_branch": "master",
+  "size_kb": 32337
+ },
+ {
+  "full_name": "sebastianbergmann/exporter",
+  "stars": 6811,
+  "default_branch": "main",
+  "size_kb": 82597
+ },
+ {
+  "full_name": "sebastianbergmann/environment",
+  "stars": 6766,
+  "default_branch": "main",
+  "size_kb": 71274
+ },
+ {
+  "full_name": "flarum/framework",
+  "stars": 6746,
+  "default_branch": "2.x",
+  "size_kb": 189412
+ },
+ {
+  "full_name": "humhub/humhub",
+  "stars": 6738,
+  "default_branch": "master",
+  "size_kb": 156542
+ },
+ {
+  "full_name": "doctrine/annotations",
+  "stars": 6731,
+  "default_branch": "2.0.x",
+  "size_kb": 14397
+ },
+ {
+  "full_name": "sebastianbergmann/code-unit-reverse-lookup",
+  "stars": 6679,
+  "default_branch": "main",
+  "size_kb": 76394
+ },
+ {
+  "full_name": "thephpleague/oauth2-server",
+  "stars": 6662,
+  "default_branch": "master",
+  "size_kb": 15008
+ },
+ {
+  "full_name": "symfony/translation",
+  "stars": 6599,
+  "default_branch": "8.2",
+  "size_kb": 3423
+ },
+ {
+  "full_name": "sebastianbergmann/global-state",
+  "stars": 6593,
+  "default_branch": "main",
+  "size_kb": 68344
+ },
+ {
+  "full_name": "sebastianbergmann/version",
+  "stars": 6569,
+  "default_branch": "main",
+  "size_kb": 33021
+ },
+ {
+  "full_name": "sebastianbergmann/recursion-context",
+  "stars": 6561,
+  "default_branch": "main",
+  "size_kb": 89003
+ },
+ {
+  "full_name": "roots/bedrock",
+  "stars": 6557,
+  "default_branch": "master",
+  "size_kb": 963
+ },
+ {
+  "full_name": "php-pm/php-pm",
+  "stars": 6549,
+  "default_branch": "master",
+  "size_kb": 762
+ },
+ {
+  "full_name": "sebastianbergmann/object-enumerator",
+  "stars": 6528,
+  "default_branch": "main",
+  "size_kb": 90440
+ },
+ {
+  "full_name": "larastan/larastan",
+  "stars": 6493,
+  "default_branch": "3.x",
+  "size_kb": 9376
+ },
+ {
+  "full_name": "MISP/MISP",
+  "stars": 6487,
+  "default_branch": "2.5",
+  "size_kb": 204246
+ },
+ {
+  "full_name": "ratchetphp/Ratchet",
+  "stars": 6436,
+  "default_branch": "0.4.x",
+  "size_kb": 1260
+ },
+ {
+  "full_name": "kalcaddle/KodExplorer",
+  "stars": 6383,
+  "default_branch": "master",
+  "size_kb": 57822
+ },
+ {
+  "full_name": "sebastianbergmann/php-token-stream",
+  "stars": 6374,
+  "default_branch": "master",
+  "size_kb": 22010
+ },
+ {
+  "full_name": "electerious/Lychee",
+  "stars": 6357,
+  "default_branch": "master",
+  "size_kb": 5917
+ },
+ {
+  "full_name": "dnoegel/php-xdg-base-dir",
+  "stars": 6290,
+  "default_branch": "master",
+  "size_kb": 30
+ },
+ {
+  "full_name": "sebastianbergmann/object-reflector",
+  "stars": 6272,
+  "default_branch": "main",
+  "size_kb": 100309
+ },
+ {
+  "full_name": "glpi-project/glpi",
+  "stars": 6259,
+  "default_branch": "11.0/bugfixes",
+  "size_kb": 1116855
+ },
+ {
+  "full_name": "sebastianbergmann/resource-operations",
+  "stars": 6256,
+  "default_branch": "main",
+  "size_kb": 63
+ },
+ {
+  "full_name": "mledoze/countries",
+  "stars": 6255,
+  "default_branch": "master",
+  "size_kb": 28534
+ },
+ {
+  "full_name": "fruitcake/laravel-cors",
+  "stars": 6236,
+  "default_branch": "master",
+  "size_kb": 372
+ },
+ {
+  "full_name": "aws/aws-sdk-php",
+  "stars": 6203,
+  "default_branch": "master",
+  "size_kb": 621068
+ },
+ {
+  "full_name": "nWidart/laravel-modules",
+  "stars": 6200,
+  "default_branch": "master",
+  "size_kb": 2323
+ },
+ {
+  "full_name": "botman/botman",
+  "stars": 6161,
+  "default_branch": "2.0",
+  "size_kb": 1511
+ },
+ {
+  "full_name": "spatie/laravel-medialibrary",
+  "stars": 6160,
+  "default_branch": "main",
+  "size_kb": 12179
+ },
+ {
+  "full_name": "JakubOnderka/PHP-Console-Highlighter",
+  "stars": 6157,
+  "default_branch": "master",
+  "size_kb": 30
+ },
+ {
+  "full_name": "hirak/prestissimo",
+  "stars": 6118,
+  "default_branch": "master",
+  "size_kb": 3573
+ },
+ {
+  "full_name": "JakubOnderka/PHP-Console-Color",
+  "stars": 6114,
+  "default_branch": "master",
+  "size_kb": 19
+ },
+ {
+  "full_name": "passbolt/passbolt_api",
+  "stars": 6089,
+  "default_branch": "master",
+  "size_kb": 180976
+ },
+ {
+  "full_name": "thephpleague/omnipay",
+  "stars": 6054,
+  "default_branch": "master",
+  "size_kb": 1926
+ },
+ {
+  "full_name": "doctrine/event-manager",
+  "stars": 6045,
+  "default_branch": "2.1.x",
+  "size_kb": 592
+ },
+ {
+  "full_name": "Respect/Validation",
+  "stars": 6028,
+  "default_branch": "main",
+  "size_kb": 16564
+ },
+ {
+  "full_name": "spatie/laravel-backup",
+  "stars": 6019,
+  "default_branch": "main",
+  "size_kb": 2642
+ },
+ {
+  "full_name": "Zizaco/entrust",
+  "stars": 6004,
+  "default_branch": "master",
+  "size_kb": 510
+ },
+ {
+  "full_name": "doctrine/collections",
+  "stars": 5975,
+  "default_branch": "3.1.x",
+  "size_kb": 1066
+ },
+ {
+  "full_name": "prasathmani/tinyfilemanager",
+  "stars": 5966,
+  "default_branch": "master",
+  "size_kb": 7152
+ },
+ {
+  "full_name": "codeigniter4/CodeIgniter4",
+  "stars": 5966,
+  "default_branch": "develop",
+  "size_kb": 389088
+ },
+ {
+  "full_name": "itsgoingd/clockwork",
+  "stars": 5946,
+  "default_branch": "master",
+  "size_kb": 12341
+ },
+ {
+  "full_name": "ZoneMinder/zoneminder",
+  "stars": 5918,
+  "default_branch": "master",
+  "size_kb": 164605
+ },
+ {
+  "full_name": "alexjustesen/speedtest-tracker",
+  "stars": 5916,
+  "default_branch": "1.x",
+  "size_kb": 23447
+ },
+ {
+  "full_name": "spatie/laravel-activitylog",
+  "stars": 5894,
+  "default_branch": "main",
+  "size_kb": 2176
+ },
+ {
+  "full_name": "vimeo/psalm",
+  "stars": 5884,
+  "default_branch": "6.x",
+  "size_kb": 121203
+ },
+ {
+  "full_name": "Audi-1/sqli-labs",
+  "stars": 5834,
+  "default_branch": "master",
+  "size_kb": 3865
+ },
+ {
+  "full_name": "tijsverkoyen/CssToInlineStyles",
+  "stars": 5828,
+  "default_branch": "master",
+  "size_kb": 245
+ },
+ {
+  "full_name": "openai-php/client",
+  "stars": 5828,
+  "default_branch": "main",
+  "size_kb": 2754
+ },
+ {
+  "full_name": "causefx/Organizr",
+  "stars": 5810,
+  "default_branch": "v2-master",
+  "size_kb": 63393
+ },
+ {
+  "full_name": "doctrine/common",
+  "stars": 5800,
+  "default_branch": "3.5.x",
+  "size_kb": 17190
+ },
+ {
+  "full_name": "laravel/socialite",
+  "stars": 5746,
+  "default_branch": "5.x",
+  "size_kb": 766
+ },
+ {
+  "full_name": "pfsense/pfsense",
+  "stars": 5719,
+  "default_branch": "master",
+  "size_kb": 408974
+ },
+ {
+  "full_name": "SuiteCRM/SuiteCRM",
+  "stars": 5690,
+  "default_branch": "hotfix",
+  "size_kb": 148047
+ },
+ {
+  "full_name": "timber/timber",
+  "stars": 5652,
+  "default_branch": "2.x",
+  "size_kb": 17131
+ },
+ {
+  "full_name": "hlmd/Postman-cn",
+  "stars": 5646,
+  "default_branch": "master",
+  "size_kb": 1682
+ },
+ {
+  "full_name": "rappasoft/laravel-boilerplate",
+  "stars": 5632,
+  "default_branch": "master",
+  "size_kb": 47372
+ },
+ {
+  "full_name": "nunomaduro/phpinsights",
+  "stars": 5631,
+  "default_branch": "master",
+  "size_kb": 13654
+ },
+ {
+  "full_name": "phan/phan",
+  "stars": 5623,
+  "default_branch": "v6",
+  "size_kb": 74442
+ },
+ {
+  "full_name": "phpseclib/phpseclib",
+  "stars": 5585,
+  "default_branch": "master",
+  "size_kb": 18766
+ },
+ {
+  "full_name": "solstice23/argon-theme",
+  "stars": 5570,
+  "default_branch": "master",
+  "size_kb": 25923
+ },
+ {
+  "full_name": "kuaifan/dootask",
+  "stars": 5555,
+  "default_branch": "pro",
+  "size_kb": 366224
+ },
+ {
+  "full_name": "swoft-cloud/swoft",
+  "stars": 5536,
+  "default_branch": "master",
+  "size_kb": 6815
+ },
+ {
+  "full_name": "lizhipay/acg-faka",
+  "stars": 5513,
+  "default_branch": "main",
+  "size_kb": 22704
+ },
+ {
+  "full_name": "pagekit/pagekit",
+  "stars": 5457,
+  "default_branch": "develop",
+  "size_kb": 16759
+ },
+ {
+  "full_name": "vinkla/hashids",
+  "stars": 5429,
+  "default_branch": "master",
+  "size_kb": 300
+ },
+ {
+  "full_name": "openemr/openemr",
+  "stars": 5389,
+  "default_branch": "master",
+  "size_kb": 1160491
+ },
+ {
+  "full_name": "leokhoa/laragon",
+  "stars": 5389,
+  "default_branch": "master",
+  "size_kb": 445583
+ },
+ {
+  "full_name": "yansongda/pay",
+  "stars": 5363,
+  "default_branch": "master",
+  "size_kb": 4105
+ },
+ {
+  "full_name": "elastic/elasticsearch-php",
+  "stars": 5338,
+  "default_branch": "main",
+  "size_kb": 11768
+ },
+ {
+  "full_name": "zircote/swagger-php",
+  "stars": 5306,
+  "default_branch": "master",
+  "size_kb": 7276
+ },
+ {
+  "full_name": "nikic/FastRoute",
+  "stars": 5267,
+  "default_branch": "master",
+  "size_kb": 331
+ },
+ {
+  "full_name": "fecshop/yii2_fecshop",
+  "stars": 5265,
+  "default_branch": "master",
+  "size_kb": 9296
+ },
+ {
+  "full_name": "shlinkio/shlink",
+  "stars": 5242,
+  "default_branch": "develop",
+  "size_kb": 38769
+ },
+ {
+  "full_name": "spatie/browsershot",
+  "stars": 5241,
+  "default_branch": "main",
+  "size_kb": 90390
+ },
+ {
+  "full_name": "RaspAP/raspap-webgui",
+  "stars": 5216,
+  "default_branch": "master",
+  "size_kb": 31279
+ },
+ {
+  "full_name": "laravel/telescope",
+  "stars": 5215,
+  "default_branch": "5.x",
+  "size_kb": 15607
+ },
+ {
+  "full_name": "php-webdriver/php-webdriver",
+  "stars": 5199,
+  "default_branch": "main",
+  "size_kb": 14954
+ },
+ {
+  "full_name": "theseer/tokenizer",
+  "stars": 5195,
+  "default_branch": "main",
+  "size_kb": 133
+ },
+ {
+  "full_name": "php-fig/cache",
+  "stars": 5176,
+  "default_branch": "master",
+  "size_kb": 57
+ },
+ {
+  "full_name": "wikimedia/mediawiki",
+  "stars": 5151,
+  "default_branch": "master",
+  "size_kb": 2653833
+ },
+ {
+  "full_name": "wp-cli/wp-cli",
+  "stars": 5142,
+  "default_branch": "main",
+  "size_kb": 16202
+ },
+ {
+  "full_name": "joomla/joomla-cms",
+  "stars": 5125,
+  "default_branch": "5.4-dev",
+  "size_kb": 348775
+ },
+ {
+  "full_name": "cydrobolt/polr",
+  "stars": 5096,
+  "default_branch": "master",
+  "size_kb": 24360
+ },
+ {
+  "full_name": "beyondcode/laravel-websockets",
+  "stars": 5074,
+  "default_branch": "master",
+  "size_kb": 1162
+ },
+ {
+  "full_name": "v2board/v2board",
+  "stars": 5061,
+  "default_branch": "master",
+  "size_kb": 43129
+ },
+ {
+  "full_name": "giggsey/libphonenumber-for-php",
+  "stars": 5049,
+  "default_branch": "master",
+  "size_kb": 23269
+ },
+ {
+  "full_name": "PHP-FFMpeg/PHP-FFMpeg",
+  "stars": 5017,
+  "default_branch": "master",
+  "size_kb": 12118
+ },
+ {
+  "full_name": "antonkomarev/github-profile-views-counter",
+  "stars": 5013,
+  "default_branch": "master",
+  "size_kb": 166
+ },
+ {
+  "full_name": "catfan/Medoo",
+  "stars": 4947,
+  "default_branch": "master",
+  "size_kb": 532
+ },
+ {
+  "full_name": "Ocramius/ProxyManager",
+  "stars": 4943,
+  "default_branch": "2.15.x",
+  "size_kb": 4662
+ },
+ {
+  "full_name": "kimai/kimai",
+  "stars": 4938,
+  "default_branch": "main",
+  "size_kb": 60074
+ },
+ {
+  "full_name": "sebastianbergmann/phpunit-mock-objects",
+  "stars": 4927,
+  "default_branch": "master",
+  "size_kb": 1374
+ },
+ {
+  "full_name": "statamic/cms",
+  "stars": 4876,
+  "default_branch": "6.x",
+  "size_kb": 103719
+ },
+ {
+  "full_name": "chriskacerguis/codeigniter-restserver",
+  "stars": 4868,
+  "default_branch": "main",
+  "size_kb": 4025
+ },
+ {
+  "full_name": "yajra/laravel-datatables",
+  "stars": 4867,
+  "default_branch": "master",
+  "size_kb": 3661
+ },
+ {
+  "full_name": "Codeception/Codeception",
+  "stars": 4861,
+  "default_branch": "main",
+  "size_kb": 73633
+ },
+ {
+  "full_name": "mtdowling/cron-expression",
+  "stars": 4861,
+  "default_branch": "master",
+  "size_kb": 200
+ },
+ {
+  "full_name": "moneyphp/money",
+  "stars": 4861,
+  "default_branch": "master",
+  "size_kb": 1373
+ },
+ {
+  "full_name": "jenssegers/agent",
+  "stars": 4846,
+  "default_branch": "master",
+  "size_kb": 232
+ },
+ {
+  "full_name": "librenms/librenms",
+  "stars": 4846,
+  "default_branch": "master",
+  "size_kb": 374344
+ },
+ {
+  "full_name": "doctrine/DoctrineBundle",
+  "stars": 4831,
+  "default_branch": "3.3.x",
+  "size_kb": 4385
+ },
+ {
+  "full_name": "yiisoft/yii",
+  "stars": 4823,
+  "default_branch": "master",
+  "size_kb": 31581
+ },
+ {
+  "full_name": "anonaddy/anonaddy",
+  "stars": 4816,
+  "default_branch": "master",
+  "size_kb": 5409
+ },
+ {
+  "full_name": "endroid/qr-code",
+  "stars": 4806,
+  "default_branch": "main",
+  "size_kb": 15130
+ },
+ {
+  "full_name": "orchidsoftware/platform",
+  "stars": 4793,
+  "default_branch": "master",
+  "size_kb": 127758
+ },
+ {
+  "full_name": "corcel/corcel",
+  "stars": 4776,
+  "default_branch": "9.0",
+  "size_kb": 1675
+ },
+ {
+  "full_name": "doctrine/migrations",
+  "stars": 4768,
+  "default_branch": "3.9.x",
+  "size_kb": 5178
+ },
+ {
+  "full_name": "easy-swoole/easyswoole",
+  "stars": 4758,
+  "default_branch": "3.x",
+  "size_kb": 2960
+ },
+ {
+  "full_name": "MlgmXyysd/Xiaomi-HyperOS-BootLoader-Bypass",
+  "stars": 4731,
+  "default_branch": "master",
+  "size_kb": 41
+ },
+ {
+  "full_name": "webonyx/graphql-php",
+  "stars": 4718,
+  "default_branch": "master",
+  "size_kb": 9328
+ },
+ {
+  "full_name": "dokuwiki/dokuwiki",
+  "stars": 4707,
+  "default_branch": "master",
+  "size_kb": 45500
+ },
+ {
+  "full_name": "mpdf/mpdf",
+  "stars": 4700,
+  "default_branch": "development",
+  "size_kb": 99002
+ },
+ {
+  "full_name": "nunomaduro/collision",
+  "stars": 4661,
+  "default_branch": "v8.x",
+  "size_kb": 2320
+ },
+ {
+  "full_name": "cedar2025/Xboard",
+  "stars": 4660,
+  "default_branch": "master",
+  "size_kb": 76166
+ },
+ {
+  "full_name": "opnsense/core",
+  "stars": 4645,
+  "default_branch": "master",
+  "size_kb": 102445
+ },
+ {
+  "full_name": "symfony/filesystem",
+  "stars": 4634,
+  "default_branch": "8.2",
+  "size_kb": 1265
+ },
+ {
+  "full_name": "php-amqplib/php-amqplib",
+  "stars": 4601,
+  "default_branch": "master",
+  "size_kb": 9025
+ },
+ {
+  "full_name": "Hanson/vbot",
+  "stars": 4581,
+  "default_branch": "master",
+  "size_kb": 1404
+ },
+ {
+  "full_name": "easychen/stack-roadmap",
+  "stars": 4574,
+  "default_branch": "main",
+  "size_kb": 47659
+ },
+ {
+  "full_name": "exposedev/expose",
+  "stars": 4568,
+  "default_branch": "master",
+  "size_kb": 261646
+ },
+ {
+  "full_name": "tecnickcom/TCPDF",
+  "stars": 4540,
+  "default_branch": "main",
+  "size_kb": 69124
+ },
+ {
+  "full_name": "cakephp/phinx",
+  "stars": 4539,
+  "default_branch": "0.x",
+  "size_kb": 9561
+ },
+ {
+  "full_name": "aimeos/aimeos-core",
+  "stars": 4526,
+  "default_branch": "master",
+  "size_kb": 99330
+ }
+]
