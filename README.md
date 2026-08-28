@@ -421,3 +421,6 @@ and the Zend Engine License were formally retired on 2026-05-07; PHP License
 v4.0 is textually identical to the Modified BSD License. Using the same terms
 means the tooling and its output can be attached to an RFC without licence
 friction.
+
+## Discussion
+https://news-web.php.net/php.internals/132344
